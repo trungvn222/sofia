@@ -7,5 +7,6 @@ export default interface IProduct {
     thumbUrl: string,
     cats: Array<number>,
     featured: boolean,
-    gallery:Array<IProductGallery> | []
+    gallery:Array<IProductGallery> | [],
+    content: string
 }

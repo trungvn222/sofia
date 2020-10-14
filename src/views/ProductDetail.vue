@@ -7,14 +7,9 @@
             </div>
             <div class="col-12 col-lg-6">
                 <heading class="mb-5" v-if="productDetail" :title="productDetail.title" />
-                <div class="product_meta">
-                    <p><span>CODE: </span>TB2 - 02 - 0002</p>
-                    <p><span>DIMENSIONS: </span>W2600xD1100xH760</p>
-                    <p><span>MATERIAL: </span></p>
-                    <ul class="material">
-                        <li>America Walnut</li>
-                        <li>Manufactured wood combined with Veneer</li>
-                    </ul>
+
+                <div class="product_meta" v-html="productDetail.content">
+
                 </div>
                 <a @click.prevent="handleShowForm" class="btn-primary mt-4" href="">GET FREE QUOTE</a>
             </div>

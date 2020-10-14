@@ -41,7 +41,7 @@ export default createStore({
     },
     relatedProduct: state => {
       const {productDetail} = state;
-      const {cats = []} = productDetail as IProduct;
+      const {cats = [], id = 0} = productDetail as IProduct;
       if(!cats.length){
         return [];
       }
@@ -53,8 +53,10 @@ export default createStore({
         const index = p.cats.findIndex((value: number) => {
           return cats.findIndex(cat => cat === value) >= 0;
         });
-        return index >= 0;
+       
+        return index >= 0 && p.id !== id;
       });
+     
       return items.splice(0, 3);
     }
   },
