@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400&display=swap");
+@import "node_modules/bootstrap-scss/functions";
+@import "node_modules/bootstrap-scss/variables";
+@import "node_modules/bootstrap-scss/mixins";
+@import "node_modules/bootstrap-scss/reboot";
+@import "node_modules/bootstrap-scss/type";
+@import "node_modules/bootstrap-scss/images";
+@import "node_modules/bootstrap-scss/grid";
+@import "node_modules/bootstrap-scss/utilities";
+
+@import "./mixins";
+
+body {
+	--font-heading: "Merriweather", serif;
+	--font-body: "Lato", sans-serif;
+	--background-color-light: #f7f7f7;
+	--border-color: #eeeeee;
+	--text-color-light: #a9a9a9;
+	--form-bg: #ececec;
+	font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+}
+
+#app {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1400px;
+}
+.container-full {
+	@include container-full;
+}
+.reset-ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.btn-primary {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.86rem;
+	line-height: 1.2222222222;
+	background: #555;
+	color: #fff;
+	padding: 12px 40px;
+	display: inline-block;
+	border: none;
+
+	&:hover {
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+}
